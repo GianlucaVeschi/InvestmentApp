@@ -1,18 +1,37 @@
 package com.gianlucaveschi.investmentapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.Button
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_main.*
+
+const val EXTRA_MESSAGE = "MESSAGE"
 
 class MainActivity : AppCompatActivity(), OnStockItemClickListener{
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        //setContentView(R.layout.activity_main) //References the layout
 
-        val exampleList = generateDummyList(500)
+        //UI
+        val fab: View = findViewById(R.id.fab)
+        val rollButton: Button = findViewById(R.id.roll_button)
+        val exampleList = generateDummyList(10)
+
+        fab.setOnClickListener { view ->
+            Snackbar.make(view, "New stock added to the Watch List", Snackbar.LENGTH_LONG)
+                .setAction("Action", null)
+                .show()
+        }
+
+        rollButton.setOnClickListener{
+            Toast.makeText(this, "button clicked", Toast.LENGTH_SHORT).show()
+        }
 
         recycler_view.adapter = StockAdapter(exampleList,this)
         recycler_view.layoutManager = LinearLayoutManager(this)
@@ -39,9 +58,16 @@ class MainActivity : AppCompatActivity(), OnStockItemClickListener{
         return  list
     }
 
-    override fun onClick(stockItem: StockItem) {
+    override fun onStockClick(stockItem: StockItem) {
         Toast.makeText(this,"Stock name ${stockItem.text1} \n ",Toast.LENGTH_LONG)
             .show()
+
+        //Open Activity
+        val intent = Intent(this, ExampleActivity::class.java).apply {
+            putExtra(EXTRA_MESSAGE, "Ni Hao")
+        }
+        startActivity(intent)
+
     }
 
 }

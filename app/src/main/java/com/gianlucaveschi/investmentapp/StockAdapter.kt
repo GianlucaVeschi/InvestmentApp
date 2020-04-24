@@ -27,7 +27,7 @@ class StockAdapter(private val stockList : List<StockItem>, val stockClickListen
         fun bind(stockItem: StockItem, clickListener: OnStockItemClickListener) {
 
             itemView.setOnClickListener {
-                clickListener.onClick(stockItem)
+                clickListener.onStockClick(stockItem)
             }
         }
 
