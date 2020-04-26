@@ -1,20 +1,24 @@
-package com.gianlucaveschi.investmentapp
+package com.gianlucaveschi.investmentapp.adapters
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.gianlucaveschi.investmentapp.R
 import kotlinx.android.synthetic.main.example_item.view.*
-import android.util.Log
-
+import com.gianlucaveschi.investmentapp.models.StockItem
 
 
 //To extend a class we use colon :
 class StockAdapter(private val stockList : List<StockItem>, val stockClickListener: OnStockItemClickListener)
     : RecyclerView.Adapter<StockAdapter.StockViewHolder>() {
+
+    //Internal OnClickListener
+    interface OnStockItemClickListener {
+        fun onStockClick(stockItem: StockItem)
+    }
 
     //Internal View Holder
     class StockViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
@@ -42,7 +46,9 @@ class StockAdapter(private val stockList : List<StockItem>, val stockClickListen
         val  itemView = LayoutInflater.from(parent.context)
             .inflate(R.layout.example_item, parent,false)
 
-        return StockViewHolder(itemView)
+        return StockViewHolder(
+            itemView
+        )
     }
 
     /*This method will be called many times, either when we scroll to see more item or when

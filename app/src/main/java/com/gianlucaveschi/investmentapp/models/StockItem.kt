@@ -1,4 +1,4 @@
-package com.gianlucaveschi.investmentapp
+package com.gianlucaveschi.investmentapp.models
 
 
 /**

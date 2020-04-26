@@ -9,9 +9,6 @@ import android.view.ViewGroup
 
 import com.gianlucaveschi.investmentapp.R
 
-/**
- * A simple [Fragment] subclass.
- */
 class ViewBalanceFragment : Fragment() {
 
     override fun onCreateView(
