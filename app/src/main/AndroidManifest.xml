@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.ExampleActivity"
+            android:name=".activities.TransactionsActivity"
             android:parentActivityName=".activities.MainActivity">
         </activity>
     </application>

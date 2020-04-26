@@ -92,7 +92,7 @@
         android:defaultValue="None"/>
 
     <argument android:name="amount"
-        app:argType="com.gianlucaveschi.investmentapp.Money"/>
+        app:argType="com.gianlucaveschi.investmentapp.models.Money"/>
     </fragment>
 
 </navigation>

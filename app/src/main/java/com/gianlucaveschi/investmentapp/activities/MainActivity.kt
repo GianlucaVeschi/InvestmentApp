@@ -1,5 +1,6 @@
 package com.gianlucaveschi.investmentapp.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
@@ -64,6 +65,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, NavigationView.O
             }
             R.id.nav_portfolio -> {
                 Toast.makeText(this, "Portfolio clicked", Toast.LENGTH_SHORT).show()
+            }
+            R.id.nav_transactions -> {
+                val intent = Intent(this, TransactionsActivity::class.java)
+                startActivity(intent)
             }
             R.id.nav_update -> {
                 Toast.makeText(this, "Update clicked", Toast.LENGTH_SHORT).show()
