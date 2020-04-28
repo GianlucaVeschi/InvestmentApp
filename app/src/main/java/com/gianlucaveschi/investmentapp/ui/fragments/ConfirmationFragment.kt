@@ -1,4 +1,4 @@
-package com.gianlucaveschi.investmentapp.fragments
+package com.gianlucaveschi.investmentapp.ui.fragments
 
 
 import android.os.Bundle

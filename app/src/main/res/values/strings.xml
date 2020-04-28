@@ -4,4 +4,7 @@
     <string name="submit">submit</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="alpha_vantage_api_key">XGYFPP3RQ2UZMU5R</string>
+    <string name="symbol">Symbol</string>
+    <string name="sector">Sector</string>
+    <string name="company_name">Company Name</string>
 </resources>

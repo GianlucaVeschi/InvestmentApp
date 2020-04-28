@@ -37,18 +37,18 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="This is my content area."
-            android:layout_centerHorizontal="true" />
 
         <Button
             android:id="@+id/get_data_btn"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Get Data"
-            android:layout_centerInParent="true"/>
+            android:text="Get Data"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/companies_rec_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/get_data_btn"/>
 
     </RelativeLayout>
 

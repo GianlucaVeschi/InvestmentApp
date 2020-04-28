@@ -8,7 +8,7 @@
     <!-- Main Fragment -->
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.gianlucaveschi.investmentapp.fragments.MainFragment"
+        android:name="com.gianlucaveschi.investmentapp.ui.fragments.MainFragment"
         android:label="MainFragment"
         tools:layout="@layout/fragment_main">
         <action
@@ -38,7 +38,7 @@
     <!-- Choose Recipient Fragment -->
     <fragment
         android:id="@+id/chooseRecipientFragment"
-        android:name="com.gianlucaveschi.investmentapp.fragments.ChooseRecipientFragment"
+        android:name="com.gianlucaveschi.investmentapp.ui.fragments.ChooseRecipientFragment"
         android:label="ChooseRecipientFragment"
         tools:layout="@layout/fragment_choose_recipient">
         <action
@@ -53,7 +53,7 @@
     <!-- Specify Amount Fragment -->
     <fragment
         android:id="@+id/specifyAmountFragment"
-        android:name="com.gianlucaveschi.investmentapp.fragments.SpecifyAmountFragment"
+        android:name="com.gianlucaveschi.investmentapp.ui.fragments.SpecifyAmountFragment"
         android:label="SpecifyAmountFragment"
         tools:layout="@layout/fragment_specify_amount">
 
@@ -71,21 +71,21 @@
     <!-- View Balance Fragment -->
     <fragment
         android:id="@+id/viewBalanceFragment"
-        android:name="com.gianlucaveschi.investmentapp.fragments.ViewBalanceFragment"
+        android:name="com.gianlucaveschi.investmentapp.ui.fragments.ViewBalanceFragment"
         android:label="ViewBalanceFragment"
         tools:layout="@layout/fragment_view_balance"/>
 
     <!-- View Transaction Fragment -->
     <fragment
         android:id="@+id/viewTransactionFragment"
-        android:name="com.gianlucaveschi.investmentapp.fragments.ViewTransactionFragment"
+        android:name="com.gianlucaveschi.investmentapp.ui.fragments.ViewTransactionFragment"
         android:label="ViewTransactionFragment"
         tools:layout="@layout/fragment_view_transaction"/>
 
     <!-- Confirmation Fragment -->
     <fragment
         android:id="@+id/confirmationFragment"
-        android:name="com.gianlucaveschi.investmentapp.fragments.ConfirmationFragment"
+        android:name="com.gianlucaveschi.investmentapp.ui.fragments.ConfirmationFragment"
         android:label="ConfirmationFragment"
         tools:layout="@layout/fragment_confirmation">
     <argument android:name="recipient"

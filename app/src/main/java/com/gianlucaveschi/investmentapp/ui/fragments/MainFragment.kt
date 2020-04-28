@@ -1,4 +1,4 @@
-package com.gianlucaveschi.investmentapp.fragments
+package com.gianlucaveschi.investmentapp.ui.fragments
 
 
 import android.os.Bundle
@@ -6,7 +6,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 
